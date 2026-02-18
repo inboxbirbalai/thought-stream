@@ -13,12 +13,13 @@ const ThoughtStream = () => {
     setThoughts([]);
     setFinalAnswer('');
 
+    // Generate dynamic steps based on the user prompt
     const steps = [
-      { id: 1, label: 'Parsing intent...', detail: 'Deconstructing semantic requirements for: ' + prompt.substring(0, 20) + '...' },
-      { id: 2, label: 'Retrieving context...', detail: 'Scanning internal memory vectors for relevant data points.' },
-      { id: 3, label: 'Generating hypothesis...', detail: 'Synthesizing potential solutions using probabilistic reasoning.' },
-      { id: 4, label: 'Self-correcting...', detail: 'Checking for logical inconsistencies in the initial draft.' },
-      { id: 5, label: 'Finalizing response...', detail: 'Formatting output for human readability.' },
+      { id: 1, label: 'Parsing intent...', detail: `Deconstructing semantic requirements for: "${prompt.substring(0, 30)}${prompt.length > 30 ? '...' : ''}"` },
+      { id: 2, label: 'Retrieving context...', detail: 'Scanning internal memory vectors and live trend data from X.' },
+      { id: 3, label: 'Generating hypothesis...', detail: 'Synthesizing a probabilistic response based on the detected intent.' },
+      { id: 4, label: 'Self-correcting...', detail: 'Checking for logical inconsistencies and refining the output tone.' },
+      { id: 5, label: 'Finalizing response...', detail: 'Formatting the crystallized answer for human readability.' },
     ];
 
     for (const step of steps) {
@@ -26,7 +27,7 @@ const ThoughtStream = () => {
       await new Promise(r => setTimeout(r, 1200));
     }
 
-    setFinalAnswer("Based on my 'Chain of Thought' reasoning, the trend you're seeing on X is real. Users are obsessed with transparency—they don't just want the answer; they want to see the work.");
+    setFinalAnswer(`Based on my 'Chain of Thought' reasoning regarding "${prompt}", I've analyzed the viral mechanics and current user sentiment. The synthesis confirms that transparency and step-by-step deconstruction are the primary drivers of engagement in early 2026 AI interfaces.`);
     setIsThinking(false);
   };
 
