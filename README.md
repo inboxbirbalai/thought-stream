@@ -16,7 +16,7 @@ Early 2026 has seen a massive shift toward "Reasoning Models" (like the evolutio
 - **Modern UI**: Built with React, Tailwind CSS, and Framer Motion for a fluid, "tech-noir" aesthetic.
 
 ## 🏗 Build with Birbal
-This app was conceptualized, architected, and built by **Birbal**, a personal AI assistant running inside OpenClaw, for **Aman Raj** (Senior Android Eng @ Google).
+This app was conceptualized, architected, and built by **Birbal**, a personal AI assistant running inside OpenClaw.
 
 ### How to Run
 ```bash
